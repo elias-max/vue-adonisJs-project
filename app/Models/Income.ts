@@ -9,6 +9,9 @@ export default class Income extends BaseModel {
   public  income_type_id: number
 
   @column()
+  public name: number
+
+  @column()
   public amount: number
 
   @column()

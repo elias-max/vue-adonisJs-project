@@ -8,7 +8,7 @@ export default class Expenses extends BaseSchema {
       table.increments('id')
       table.integer('expense_type_id').references('expense_type')
       table.decimal('amount').notNullable()
-      table.string('date')
+      table.date('date')
       table.timestamps(true)
     })
   }

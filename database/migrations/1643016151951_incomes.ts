@@ -8,7 +8,7 @@ export default class Incomes extends BaseSchema {
       table.increments('id')
       table.integer('income_type_id').references('income_type')
       table.decimal('amount').notNullable()
-      table.string('date')
+      table.date('date')
       table.timestamps(true)
     })
   }
