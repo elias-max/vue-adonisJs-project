@@ -9,7 +9,7 @@ export default class Income extends BaseModel {
   public  income_type_id: number
 
   @column()
-  public name: number
+  public name: string
 
   @column()
   public amount: number

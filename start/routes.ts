@@ -25,9 +25,37 @@ Route.group(()=>{
   Route.group(() =>{
     Route.get('/member',  'MembersController.index') 
     Route.post('/member',  'MembersController.store') 
-    Route.get('/members/:id', 'MembersController.show')//edit a  member 
+    Route.get('/member/:id', 'MembersController.show')//edit a  member 
     Route.patch('/member/:id',  'MembersController.update')   
     Route.delete('/member/:id', 'MembersController.destroy') 
+  }).middleware('auth')
+   Route.group(() =>{
+    Route.get('/expense',  'ExpensesController.index') 
+    Route.post('/expense',  'ExpensesController.store') 
+    Route.get('/expense/:id', 'ExpensesController.show')//edit a  member 
+    Route.patch('/expense/:id',  'ExpensesController.update')   
+    Route.delete('/expense/:id', 'ExpensesController.destroy') 
+  }).middleware('auth')
+  Route.group(() =>{
+    Route.get('/income',  'IncomesController.index') 
+    Route.post('/income',  'IncomesController.store') 
+    Route.get('/income/:id', 'IncomesController.show')//edit a  member 
+    Route.patch('/income/:id',  'IncomesController.update')   
+    Route.delete('/income/:id', 'IncomesController.destroy') 
+  }).middleware('auth')
+  Route.group(() =>{
+    Route.get('/expensetype',  'ExpenseTypesController.index') 
+    Route.post('/expensetype',  'ExpenseTypesController.store') 
+    Route.get('/expensetype/:id', 'ExpenseTypesController.show')//edit a  member 
+    Route.patch('/expensetype/:id',  'ExpenseTypesController.update')   
+    Route.delete('/expensetype/:id', 'ExpenseTypesController.destroy') 
+  }).middleware('auth')
+  Route.group(() =>{
+    Route.get('/incometype',  'IncomeTypesController.index') 
+    Route.post('/incometype',  'IncomeTypesController.store') 
+    Route.get('/incometype/:id', 'IncomeTypesController.show')//edit a  member 
+    Route.patch('/incometype/:id',  'IncomeTypesController.update')   
+    Route.delete('/incometype/:id', 'IncomeTypesController.destroy') 
   }).middleware('auth')
 
   Route.get('/signup',  'MembersController.index')
